@@ -1,0 +1,11 @@
+width=30%
+lines=8
+term=alacritty
+layer=overlay
+allow_images=true
+gtk_dark=true
+prompt=Search
+image_size=20
+location=center
+key_expand=Tab
+insensitive=false

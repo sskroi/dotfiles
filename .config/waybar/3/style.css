@@ -1,0 +1,68 @@
+*{
+    font-family: "JetBrainsMono", "Font Awesome 6 Free";
+    font-size: 14.9px;
+    font-weight: 600;
+    /*color: white;*/
+}
+
+window#waybar {
+    background-color: #181818;
+}
+
+tooltip {
+    background-color: rgba(24,24,24,0.9);
+}
+
+#workspaces{
+    margin: 0px;
+}
+
+#workspaces button{
+    border-radius: 0; /* need for straight line under current workspaces */
+    padding: 0 5px;
+    font-weight: bolder;
+    background-color: transparent;
+    box-shadow: inset 0 -3px transparent;
+}
+
+#workspaces button.active, #workspaces button.focused{
+    box-shadow: inset 0 -3px #f8f8f2;
+}
+
+#waybar #workspaces button.empty{
+    color: #494242;
+}
+
+
+#tray,
+#mpd,
+#cpu, 
+#memory,
+#backlight, 
+#pulseaudio, 
+#custom-vpn,
+#disk,
+#battery, 
+#clock, 
+#network,
+#language {
+	padding: 0px 5px;
+    background-color: transparent;
+    border-radius: 0px;
+    margin: 0px 1px;
+}
+
+#clock {
+    margin-right: 0px;
+}
+
+#window {
+    margin-left: 10px;
+    margin-right: 6px;
+}
+
+#custom-separator {
+    color: rgba(96,96,96,0.8);
+    margin: 0 1px;
+}
+

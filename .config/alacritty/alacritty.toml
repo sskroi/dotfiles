@@ -1,0 +1,19 @@
+#import = ["~/.config/alacritty/themes/themes/"]
+
+[font]
+size = 12
+
+normal = { family = "JetBrainsMonoNL Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMonoNL Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMonoNL Nerd Font", style = "Italic" }
+bold_italic = { family = "JetBrainsMonoNL Nerd Font", style = "Bold italic" }
+
+[keyboard]
+bindings = [
+   { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" }
+]
+
+[window]
+opacity = 0.85
+dimensions = { columns = 84, lines = 26 }
+

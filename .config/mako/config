@@ -1,0 +1,29 @@
+sort=-priority
+
+on-button-left=invoke-default-action
+on-button-right=dismiss-all
+on-button-middle=dismiss
+
+default-timeout=8000
+
+width=320
+
+font=JetBrainsMonoNL Light 12
+
+background-color=#181818CD
+
+border-size=1
+#border-color=#56A588FF
+#border-color=#571961FF
+border-color=#FFFFFFFF
+border-radius=3
+
+group-by=category
+
+
+outer-margin=60,10,0,0
+margin=10, 0, 10, 0
+padding=15
+
+[mode=do-not-disturb]
+invisible=1

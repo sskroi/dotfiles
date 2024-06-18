@@ -1,0 +1,23 @@
+theme = "edge"
+
+[editor]
+mouse = true
+line-number = "relative"
+shell = ["zsh", "-c"]
+bufferline = "always"
+
+cursorline = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal]
+C-s = ":w"
+C-q = ":wq"
+y = ["yank", "yank_to_clipboard"]
+

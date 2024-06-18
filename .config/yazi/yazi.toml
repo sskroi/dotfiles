@@ -1,0 +1,53 @@
+[opener]
+edit = [
+	{ run = 'nvim "$@"', desc = "Nvim", block = true },
+	{ run = 'code "$@"', desc = "VS Code", orphan = true },
+]
+open = [
+    { run = 'xdg-open "$@"', desc = "XDG open", orphan = true, for = "linux" }
+]
+reveal = [
+	{ run = 'xdg-open "$(dirname "$0")"', desc = "Reveal", orphan = true, for = "linux" }
+]
+extract = [
+	{ run = 'unar "$1"', desc = "Extract here", for = "unix" },
+]
+# You can select files from different directories, they will all be archived at the top level of archive
+compress = [
+    { run = 'temp_str=""; for file_path in $(echo "$@"); do temp_str+="-C $(dirname "$file_path") $(basename "$file_path") "; done; eval "tar -czaf $(basename "$1").tar.gz "$temp_str""', desc = "Compress", for = "linux" }
+]
+document = [
+    { run = 'GTK_THEME="Adwaita" libreoffice "$@"', desc = "Libreoffice", orphan = true, for = "linux" }
+]
+image = [
+    { run = 'feh "$(dirname "$0")"', desc = "Feh", orphan = true, for = "linux" }
+]
+play = [
+    { run = 'vlc "$@"', desc = "VLC", orphan = true, for = "linux" }
+]
+
+[open]
+rules = [
+    { name = "*/",            use = [ "edit", "compress", "open", "reveal" ] },
+
+    { mime = "text/*",        use = [ "edit", "compress", "reveal" ] },
+    { mime = "image/*",       use = [ "image", "open", "compress", "reveal" ] },
+    { mime = "video/*",       use = [ "play", "open", "compress", "reveal" ] },
+    { mime = "audio/*",       use = [ "play", "open", "compress", "reveal" ]},
+    { mime = "inode/x-empty", use = [ "edit", "compress", "reveal" ] },
+
+    { mime = "application/json", use = [ "edit","compress", "reveal" ] },
+    { mime = "*/javascript",     use = [ "edit","compress", "reveal" ] },
+
+    { mime = "application/*document*", use = [ "document", "open", "compress", "reveal" ] },
+
+    { mime = "application/zip",             use = [ "extract", "compress", "reveal" ] },
+    { mime = "application/gzip",            use = [ "extract", "compress", "reveal" ] },
+    { mime = "application/x-tar",           use = [ "extract", "compress", "reveal" ] },
+    { mime = "application/x-bzip",          use = [ "extract", "compress", "reveal" ] },
+    { mime = "application/x-bzip2",         use = [ "extract", "compress", "reveal" ] },
+    { mime = "application/x-7z-compressed", use = [ "extract", "compress", "reveal" ] },
+    { mime = "application/x-rar",           use = [ "extract", "compress", "reveal" ] },
+
+    { name = "*", use = [ "open", "compress", "reveal" ] }
+]
