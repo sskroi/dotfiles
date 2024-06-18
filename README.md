@@ -11,3 +11,7 @@
 - **Image viewer**: feh
 - **Video/audio player**: VLC
 
+Setup using **stow**:
+```
+cd ~ && git clone https://github.com/sskroi/dotfiles && cd dotfiles && stow .
+```
