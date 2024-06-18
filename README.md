@@ -1,5 +1,5 @@
 - **Linux distro**: Arch Linux
-- **Text/code editor**: [Neovim](https://github.com/neovim/neovim)
+- **Code/text editor**: [Neovim](https://github.com/neovim/neovim) ([config](https://github.com/sskroi/dotfiles/tree/main/.config/nvim))
 - **Shell**: zsh + [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) + [zoxide](https://github.com/ajeetdsouza/zoxide) + [fzf](https://github.com/junegunn/fzf) + [eza](https://github.com/eza-community/eza)
 - **File manager**: [Yazi](https://github.com/sxyazi/yazi)
 - **Terminal**: [Alacritty](https://github.com/alacritty/alacritty)
