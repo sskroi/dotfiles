@@ -1,3 +1,2 @@
 yay
 ueberzugpp
-visual-studio-code-bin
