@@ -12,7 +12,6 @@ cmake
 delve
 devtools
 discord
-dmenu
 docker
 docker-buildx
 docker-compose
@@ -40,7 +39,6 @@ hyprpaper
 inxi
 ipython
 lazygit
-libc++
 libreoffice-still
 linux
 linux-firmware
@@ -84,7 +82,6 @@ rustup
 slurp
 sof-firmware
 spotify-launcher
-steam
 stow
 strace
 sudo
@@ -95,10 +92,7 @@ trash-cli
 ttf-font-awesome
 ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
-ueberzugpp
 unarchiver
-virtualbox
-visual-studio-code-bin
 vivaldi
 vlc
 vulkan-radeon
@@ -113,7 +107,6 @@ xdg-desktop-portal-hyprland
 xf86-video-amdgpu
 xorg-server
 xorg-xinit
-yay
 yazi
 zip
 zoxide
