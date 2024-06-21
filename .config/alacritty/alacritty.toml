@@ -1,6 +1,3 @@
-[shell]
-program="/usr/bin/zsh"
-args = []
 
 [font]
 size = 12
