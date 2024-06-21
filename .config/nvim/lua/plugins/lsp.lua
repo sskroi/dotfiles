@@ -1,7 +1,7 @@
 return {
     {
         "neovim/nvim-lspconfig",
-        dependices = { "DNLHC/glance.nvim" },
+        dependencies = { "DNLHC/glance.nvim" },
         config = function()
             local lspconfig = require("lspconfig")
             local map = vim.keymap.set
