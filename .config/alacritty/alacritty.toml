@@ -1,4 +1,6 @@
-#import = ["~/.config/alacritty/themes/themes/"]
+[shell]
+program="/usr/bin/zsh"
+args = []
 
 [font]
 size = 12
