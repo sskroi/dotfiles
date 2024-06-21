@@ -1,17 +1,34 @@
-export ZSH="$HOME/.oh-my-zsh"
+# Oh-my-zsh installation directory
+ZSH="$HOME/.local/share/oh-my-zsh"
+# Checking oh-my-zsh installation
+if [[ ! -d ${ZSH} ]] then
+    mkdir -p "${HOME}/.local/share";
+    git clone --depth 1 "https://github.com/ohmyzsh/ohmyzsh" "$ZSH"
+fi
 
+# Oh-my-zsh plugins
+plugins=()
 
+# Oh-my-zsh theme
+DEFAULT_USER='andrey'
 ZSH_THEME="agnoster"
-export DEFAULT_USER='andrey'
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-${HOST}-${ZSH_VERSION}
+# Custom location for completion cache file
+ZSH_COMPDUMP="$ZSH/cache/.zcompdump-${HOST}-${ZSH_VERSION}"
+# Custom location for history file
+HISTFILE="${HOME}/.local/state/zsh_history"
+
+# Oh-my-zsh setup
 source $ZSH/oh-my-zsh.sh
 
 
 # Env
 export EDITOR=nvim
-export VISUAL=nvim
+export VISUAL=${EDITOR}
+
+# No oh-my-zsh plugins setup
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 # Aliases
