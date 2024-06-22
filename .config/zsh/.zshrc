@@ -84,6 +84,12 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+function clean() {
+    sudo paccache -rk2
+    sudo paccache -ruk0
+    pacman -Qenq > ${HOME}/dotfiles/archlinux_explicitly_installed_packages.txt
+    pacman -Qemq > ${HOME}/dotfiles/archlinux_aur_packages_list.txt
+}
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
