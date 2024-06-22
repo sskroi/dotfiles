@@ -1,0 +1,12 @@
+add_newline = false
+
+[directory]
+truncation_length = 5
+
+[cmd_duration]
+min_time = 200
+show_milliseconds = true
+
+[character]
+success_symbol = '[❯](bold bright-purple)'
+error_symbol = '[✗](bold red)'

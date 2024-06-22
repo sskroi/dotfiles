@@ -9,10 +9,6 @@ fi
 # Oh-my-zsh plugins
 plugins=()
 
-# Oh-my-zsh theme
-DEFAULT_USER='andrey'
-ZSH_THEME="agnoster"
-
 # Custom location for completion cache file
 ZSH_COMPDUMP="$ZSH/cache/.zcompdump-${HOST}-${ZSH_VERSION}"
 # Custom location for history file
@@ -55,6 +51,8 @@ alias vpnoff='sudo wg-quick down wg0c'
 
 alias screenrec='mkdir -p ${HOME}/Videos/Screencasts && wf-recorder -c libx264rgb -r 30 -p preset=fast -f ${HOME}/Videos/Screencasts/Screencast_$(date +'%F_%T').mp4'
 
+# Starship setup
+eval "$(starship init zsh)"
 
 # Zoxide setup
 eval "$(zoxide init zsh)"
@@ -75,33 +73,6 @@ _fzf_compgen_dir() {
 
 
 # Functions
-# Show command execution time
-function preexec() {
-  timer=$(print -P %D{%s%3.})
-}
-function precmd() {
-  timeprompt=""	
-  if [ $timer ]; then
-    now=$(print -P %D{%s%3.})
-    local d_ms=$(($now - $timer))
-    local d_s=$((d_ms / 1000))
-    local ms=$((d_ms % 1000))
-    local s=$((d_s % 60))
-    local m=$(((d_s / 60) % 60))
-    local h=$((d_s / 3600))
-
-    if   ((h > 0)); then timeprompt=${h}h${m}m${s}s
-    elif ((m > 0)); then timeprompt=${m}m${s}.$(printf $(($ms / 100)))s # 1m12.3s
-    elif ((s > 9)); then timeprompt=${s}.$(printf %02d $(($ms / 10)))s # 12.34s
-    elif ((s > 0)); then timeprompt=${s}.$(printf %03d $ms)s # 1.234s
-    else timeprompt=${ms}ms
-    fi
-    timeprompt="%F{cyan}${timeprompt}"
-    export RPROMPT="${timeprompt}%{$reset_color%}"
-    unset timer
-  fi
-}
-
 # Open yazi
 function y() {
   echo -e "\e]2;yazi" # set terminal title to "yazi"

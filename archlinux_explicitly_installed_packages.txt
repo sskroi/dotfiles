@@ -81,6 +81,7 @@ rustup
 slurp
 sof-firmware
 spotify-launcher
+starship
 stow
 strace
 sudo
