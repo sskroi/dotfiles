@@ -50,7 +50,7 @@ return {
             end
 
             vim.keymap.set("n", "gr", go_to_buffer, { desc = "Go to buffer [count]" })
-            vim.keymap.set("n", "<A-q>", buffer_delete, { desc = "Close current buffer" })
+            vim.keymap.set("n", "<A-d>", buffer_delete, { desc = "Close current buffer" })
             vim.keymap.set("n", "L", "<Cmd>BufferLineCycleNext<CR>", { desc = "Go to next buffer" })
             vim.keymap.set("n", "H", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Go to prev buffer" })
             vim.keymap.set("n", "<A-l>", "<Cmd>BufferLineMoveNext<CR>", { desc = "Move current buffer next" })

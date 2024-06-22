@@ -87,7 +87,7 @@ return {
             -- Global mappings.
             -- See `:help vim.diagnostic.*` for documentation on any of the below functions
             map("n", "<leader>w", vim.diagnostic.open_float, { desc = "Diagnostic open float" })
-            map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Diagnostic open list" })
+            map("n", "<leader>a", vim.diagnostic.setloclist, { desc = "Diagnostic open list" })
             map("n", "[d", vim.diagnostic.goto_prev, { desc = "Diagnostic go to prev" })
             map("n", "]d", vim.diagnostic.goto_next, { desc = "Diagnostic go to next" })
 
@@ -110,7 +110,7 @@ return {
 
                     map("n", "<leader>lk", vim.lsp.buf.hover, opts("Show documentation"))
                     map("n", "<leader>lf", function() vim.lsp.buf.format { async = true } end,
-                        opts("Format current file"))
+                        opts("Format current buffer"))
                     map("n", "<leader>lr", vim.lsp.buf.rename, opts("Rename symbol"))
                     map("n", "<leader>lD", vim.lsp.buf.type_definition, opts("Go to type definition"))
                     map("n", "<leader>lc", vim.lsp.buf.code_action, opts("Code action"))
