@@ -1,5 +1,12 @@
 add_newline = false
 
+[character]
+success_symbol = '[❯](bold cyan)'
+error_symbol = '[✗](bold red) [❯](bold cyan)'
+
+[line_break]
+disabled = false
+
 [directory]
 truncation_length = 5
 
@@ -7,6 +14,28 @@ truncation_length = 5
 min_time = 200
 show_milliseconds = true
 
-[character]
-success_symbol = '[❯](bold bright-purple)'
-error_symbol = '[✗](bold red)'
+[golang]
+symbol = ' '
+style = 'bold 117'
+
+[python]
+symbol = ' '
+style = 'bold 142'
+
+[lua]
+symbol = ' '
+style = 'bold 74'
+
+[c]
+symbol = '󰙲 '
+detect_extensions = ['cpp', 'hpp', 'c', 'h']
+style = 'bold 153'
+commands = [ [ 'g++', '--version' ], [ 'clang++', '--version' ] ]
+
+[cmake]
+symbol = ' '
+
+[rust]
+symbol = '󱘗 '
+style = 'bold 130'
+
