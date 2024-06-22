@@ -6,6 +6,7 @@ bat
 blueman
 bluez
 brightnessctl
+btrfs-progs
 clang
 cliphist
 cmake
@@ -28,7 +29,6 @@ gimp
 git
 gnome-keyring
 go
-gopls
 grim
 grub
 htop
@@ -44,7 +44,6 @@ linux
 linux-firmware
 linux-headers
 lsof
-lua-language-server
 make
 mako
 man-db
@@ -93,6 +92,7 @@ ttf-font-awesome
 ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
 unarchiver
+unzip
 vivaldi
 vlc
 vulkan-radeon
@@ -111,3 +111,5 @@ yazi
 zip
 zoxide
 zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
