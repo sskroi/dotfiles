@@ -23,7 +23,9 @@ export EDITOR=nvim
 export VISUAL=${EDITOR}
 
 export GOPATH=${HOME}/go
+
 path+=${GOPATH}/bin
+path+=${HOME}/.cargo/bin
 
 # No oh-my-zsh plugins setup
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
