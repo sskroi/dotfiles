@@ -85,6 +85,7 @@ starship
 stow
 strace
 sudo
+swww
 telegram-desktop
 tmux
 transmission-gtk
