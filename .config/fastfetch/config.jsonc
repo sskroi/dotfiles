@@ -1,0 +1,20 @@
+{
+    "modules": [
+        "title",
+        "separator",
+        "OS",
+        "Packages",
+        "Kernel",
+        "WM",
+        "Terminal",
+        "Shell",
+        "Editor",
+        "Initsystem",
+        "CPU",
+        "Display",
+        "Disk",
+        "Memory",
+        "Break",
+        "Colors"
+    ]
+}
