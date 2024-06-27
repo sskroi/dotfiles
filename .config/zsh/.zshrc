@@ -22,6 +22,9 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=nvim
 export VISUAL=${EDITOR}
 
+export GOPATH=${HOME}/go
+path+=${GOPATH}/bin
+
 # No oh-my-zsh plugins setup
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
