@@ -1,13 +1,13 @@
 {
 "layer": "top",
 "position": "top",
-"height": 29,
+"height": 20,
 
 "reload_style_on_change": true,
 
-"modules-left": ["hyprland/language","cpu","memory","network", "custom/vpn","mpd"],
-"modules-center": ["hyprland/workspaces"],
-"modules-right":  ["tray","pulseaudio","backlight","battery","clock"],
+"modules-left": ["hyprland/workspaces", "hyprland/window"],
+"modules-center": [],
+"modules-right":  ["tray", "custom/separator", "custom/vpn", "network", "custom/separator", "pulseaudio", "custom/separator", "battery", "custom/separator", "hyprland/language", "custom/separator", "clock"],
 
 "hyprland/language": {
     "format": "&#8239;{}",
@@ -29,14 +29,17 @@
   "format": "{icon}&#8239;{capacity}%",
   "format-charging": "&#8239;{capacity}%",
   "format-plugged": "&#8239;{capacity}%",
-  "format-alt": "{icon} {time}",
-  "format-icons": ["", " ", " ", "", ""]
+  "format-icons": ["", " ", " ", "", ""],
+  "tooltip-format": "{timeTo}"
 },
 
 "hyprland/workspaces": {
     "format": "{id}",
     "sort-by-name": true,
-    "on-click": "activate"
+    "on-click": "activate",
+    "persistent-workspaces": {
+        "*": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    }
 },
 
 "hyprland/window": {
@@ -45,14 +48,13 @@
 },
 
 "tray": {
-    "icon-size": 20,
+    "icon-size": 18,
     "spacing": 7
 },
 
 "clock": {
     "locale": "en_GB.UTF-8", 
     "format": "&#8239;{:%d-%m-%Y &#8239;%H:%M}",
-    //"format-alt": "&#8239;{:%a, %b %d &#8239;%H:%M}",
     "tooltip-format": "<span size='11pt' font='JetBrainsMono'>{calendar}</span>",
     "calendar": {
         "mode"          : "month",
@@ -77,22 +79,6 @@
     }
 },
 
-"cpu": {
-    "interval": 1,
-    "format": "&#8239;{usage}%",
-    "tooltip": false
-},
-
-"memory": {
-    "interval": 1,
-    "format": "&#8239;{used:0.2f}GB",
-    "max-length": 10,
-    "warning": 70,
-    "critical": 90,
-    "tooltip": true,
-    "tooltip-format": "Memory: {used:0.2f} GB / {total:0.1f} GB\nSwap:   {swapUsed:0.2f} GB / {swapTotal:0.1f} GB"
-},
-
 "network": {
   "interval": 1,
   "format-wifi": "&#8239;{signalStrength}%",
@@ -109,20 +95,7 @@
 
 },
 
-
-"backlight": {
-    // "device": "acpi_video1",
-    "format": "{icon}&#8239;{percent}%",
-    "format-icons": ["", ""],
-    "on-scroll-down": "brightnessctl -c backlight set 5%-",
-    "on-scroll-up": "brightnessctl -c backlight set +5%",
-    "on-click": "brightnessctl -c backlight set $(brightnessctl get | awk '{ if ($1 < 255) print \"100%\"; else print \"0%\" }')",
-    "on-click-middle": "brightnessctl -c backlight set 50%",
-    "tooltip": false
-},
-
 "pulseaudio": {
-  //"format": "{icon} {volume}% {format_source}",
   "scroll-step": 5, // %, can be a float
   "format": "{icon}&#8239;{volume}%",
   "format-bluetooth": "{icon} &#8239;{volume}%",
@@ -142,32 +115,10 @@
   "on-click": "pavucontrol"
 },
 
-// not using now
-"mpd": {
-  "format": "{stateIcon} {artist} - {title}",
-  "format-disconnected": "🎶",
-  "format-stopped": "♪",
-  "interval": 10,
-  "consume-icons": {
-    "on": " " // Icon shows only when "consume" is on
-  },
-  "random-icons": {
-    "off": "<span color=\"#f53c3c\"></span> ", // Icon grayed out when "random" is off
-    "on": " "
-  },
-  "repeat-icons": {
-    "on": " "
-  },
-  "single-icons": {
-    "on": "1 "
-  },
-  "state-icons": {
-    "paused": "",
-    "playing": ""
-  },
-  "tooltip-format": "MPD (connected)",
-  "tooltip-format-disconnected": "MPD (disconnected)",
-  "max-length": 35
+"custom/separator": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
 },
 
 "custom/vpn": {

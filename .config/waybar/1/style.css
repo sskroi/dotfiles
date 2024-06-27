@@ -1,17 +1,16 @@
 *{
     font-family: "JetBrainsMono", "Font Awesome 6 Free";
-    font-size: 14.5px;
+    font-size: 14.9px;
     font-weight: 600;
-    min-height: 0;
-    color: white;
+    /*color: white;*/
 }
 
 window#waybar {
-    background-color: rgba(24,24,24,0.95);
+    background-color: #181818;
 }
 
 tooltip {
-    background-color: rgba(24,24,24,0.95);
+    background-color: rgba(24,24,24,0.9);
 }
 
 #workspaces{
@@ -19,17 +18,19 @@ tooltip {
 }
 
 #workspaces button{
-    border-radius: 15px;
-    margin: 3px 5px;
-    padding: 0px 10px;
+    border-radius: 0; /* need for straight line under current workspaces */
+    padding: 0 5px;
     font-weight: bolder;
-    background-color: #2E2D2F;
+    background-color: transparent;
+    box-shadow: inset 0 -3px transparent;
 }
 
 #workspaces button.active, #workspaces button.focused{
-    padding: 0px 16px;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;    
-    background: rgba(81,81,81,0.95); /* #7C9D96 59A3AB 681C9B*/
+    box-shadow: inset 0 -3px #f8f8f2;
+}
+
+#waybar #workspaces button.empty{
+    color: #494242;
 }
 
 
@@ -45,11 +46,23 @@ tooltip {
 #clock, 
 #network,
 #language {
-	padding: 2px 9px;
-
+	padding: 0px 5px;
     background-color: transparent;
-    border-radius: 8px;
-    margin-right: 3px;
-    margin-left: 3px;
+    border-radius: 0px;
+    margin: 0px 1px;
+}
+
+#clock {
+    margin-right: 0px;
+}
+
+#window {
+    margin-left: 10px;
+    margin-right: 6px;
+}
+
+#custom-separator {
+    color: rgba(96,96,96,0.8);
+    margin: 0 1px;
 }
 
