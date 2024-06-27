@@ -14,7 +14,7 @@ extract = [
 ]
 # You can select files from different directories, they will all be archived at the top level of archive
 compress = [
-    { run = 'temp_str=""; for file_path in $(echo "$@"); do temp_str+="-C $(dirname "$file_path") $(basename "$file_path") "; done; eval "tar -czaf $(basename "$1").tar.gz "$temp_str""', desc = "Compress", for = "linux" }
+    { run = 'temp_str=""; for file_path in $(echo "$@"); do temp_str+="-C $(dirname "$file_path") $(basename "$file_path") "; done; eval "tar -czaf $(basename "$1").tar.gz "$temp_str""', desc = "Compress (may not work correctly)", for = "linux" }
 ]
 document = [
     { run = 'GTK_THEME="Adwaita" libreoffice "$@"', desc = "Libreoffice", orphan = true, for = "linux" }
