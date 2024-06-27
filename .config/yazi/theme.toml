@@ -1,0 +1,12 @@
+[filetype]
+rules = [
+    { name = "*/", is = "link", fg = "cyan" },
+    { name = "*/", fg = "blue" },
+
+    { name = "*", is = "link", fg = "cyan" },
+    { name = "*", is = "orphan", fg = "red" },
+    { name = "*", is = "char", fg = "yellow" },
+    { name = "*", is = "block", fg = "yellow" },
+    { name = "*", is = "sock", fg = "magenta" },
+    { name = "*", is = "exec", fg = "green" },
+]
