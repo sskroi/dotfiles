@@ -1,3 +1,4 @@
+# import = ["~/.config/alacritty/gruvbox_material.toml"]
 
 [font]
 size = 12
