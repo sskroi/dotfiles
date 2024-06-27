@@ -5,6 +5,9 @@ return {
         lazy = false,
         priority = 1000,
         config = function()
+            require("catppuccin").setup({
+            })
+
             -- vim.cmd("colorscheme catppuccin-frappe")
         end,
     },
@@ -13,7 +16,7 @@ return {
         "sainnhe/gruvbox-material",
         lazy = false,
         priority = 1000,
-        config = function ()
+        config = function()
             vim.g.gruvbox_material_background = "soft"
             vim.cmd("colorscheme gruvbox-material")
         end,
