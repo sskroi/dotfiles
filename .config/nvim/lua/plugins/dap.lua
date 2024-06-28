@@ -27,13 +27,6 @@ return {
             -- }
             -- dap.configurations.c = dap.configurations.cpp
 
-            dap.adapters.cpptools = {
-                id = "cppdbg",
-                type = "executable",
-                command =
-                "/home/andrey/.vscode/extensions/ms-vscode.cpptools-1.19.9-linux-x64/debugAdapters/bin/OpenDebugAD7",
-            }
-
             dap.configurations.cpp = {
                 {
                     name = "GDB",
